@@ -56,4 +56,24 @@ def test_as_vale_um():
     assert pontos == 15
 
 
+def test_jogador_estorou():
+    jogo = Blackjack()
+
+    jogo.adicionar_carta(1, "10")
+    jogo.adicionar_carta(1, "8")
+    jogo.adicionar_carta(1, "5")
+        
+    
+    assert jogo.estorou(1) is True
+
+def test_jogador_nao_estorou():
+    jogo = Blackjack()
+    
+    jogo.adicionar_carta(1, "10")
+    jogo.adicionar_carta(1, "8")            
+        
+    assert jogo.estorou(1) is False
+
+
+
 

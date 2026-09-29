@@ -1,5 +1,5 @@
-from blackjack import Blackjack
-#from blackjack_ref import Blackjack
+#from blackjack import Blackjack
+from blackjack_ref import Blackjack
 
 
 
@@ -14,7 +14,7 @@ def test_adicionar_carta():
 
     jogo.adicionar_carta(1, "5")
     
-    assert jogo.mao_jogador1 == ["5"] #verificando se a mao do jogador 1 só tem 5
+    assert jogo.maos[1] == ["5"] #verificando se a mao do jogador 1 só tem 5
 
 def test_calcular_pontuacao():
     jogo = Blackjack()
@@ -77,10 +77,10 @@ def test_jogador_nao_estorou():
 
 def test_adicionar_carta_jogador2():
     jogo = Blackjack()
-    
+
     jogo.adicionar_carta(2, "7")
-        
-    assert jogo.mao_jogador2 == ["7"]
+
+    assert jogo.maos[2] == ["7"]
 
 
 

@@ -94,6 +94,18 @@ def test_jogador1_vence_com_maior_pontuacao():
 
     assert jogo.determinar_vencedor() == 1
 
+def test_jogador_que_estoura_perde():
+    jogo = Blackjack()
+
+    jogo.adicionar_carta(1, "10")
+    jogo.adicionar_carta(1, "10")
+    jogo.adicionar_carta(1, "5")
+
+    jogo.adicionar_carta(2, "10")
+    jogo.adicionar_carta(2, "5")
+
+    assert jogo.determinar_vencedor() == 2
+
 
 
 

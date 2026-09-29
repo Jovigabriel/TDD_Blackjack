@@ -88,4 +88,5 @@ class Blackjack:
         carta = self.baralho.pop()
         self.maos[jogador].append(carta)
 
-    
+    def visualizar_mesa(self):
+        return self.maos   

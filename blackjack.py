@@ -12,6 +12,10 @@ class Blackjack:
             total = 0
             
             for carta in self.mao_jogador1:
-               total += int(carta)
+            
+                if carta in ["J", "K", "Q"]:
+                    carta = "10"
+                
+                total += int(carta)
     
             return total

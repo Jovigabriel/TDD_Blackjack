@@ -5,6 +5,7 @@ class Blackjack:
             1: [],
             2: []
         }
+        self.baralho = []
 
     def adicionar_carta(self, jogador, valor):
         self.maos[jogador].append(valor)
@@ -70,4 +71,10 @@ class Blackjack:
 
         return 2
 
-       
+    def criar_baralho(self):
+        valores = [
+            "A", "2", "3", "4", "5", "6", "7",
+            "8", "9", "10", "J", "Q", "K"
+        ]
+
+        self.baralho = valores * 4

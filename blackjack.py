@@ -10,12 +10,19 @@ class Blackjack:
 
     def calcular_pontuacao(self, jogador):
         total = 0
+        quantidade_as = 0
             
         for carta in self.mao_jogador1:
             total += self.valor_carta(carta)
+
+            if carta.upper() == "A":
+                quantidade_as += 1
+            
+        while total > 21 and quantidade_as > 0:
+            total -=10
+            quantidade_as -=1
     
         return total
-
 
     def valor_carta(self, carta):
         carta = carta.upper()

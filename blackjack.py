@@ -9,10 +9,9 @@ class Blackjack:
             self.mao_jogador1.append(valor)
 
     def calcular_pontuacao(self, jogador):
-        somatorio = 0
-        
-        for ponto in self.mao_jogador1:
-            ponto_int = int(ponto)
-            somatorio = somatorio + ponto_int
-
-        return somatorio
+            total = 0
+            
+            for carta in self.mao_jogador1:
+               total += int(carta)
+    
+            return total

@@ -35,6 +35,9 @@ class Blackjack:
 
         return int(carta)
 
+    def estorou(self, jogador):
+        return self.calcular_pontuacao(jogador) > 21
+
     
     
 

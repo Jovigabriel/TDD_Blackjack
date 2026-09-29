@@ -4,4 +4,6 @@ class Blackjack:
         self.mao_jogador1 = []
 
     def adicionar_carta(self, jogador, valor):
-        self.mao_jogador1.append(valor)
+
+        if jogador == 1:
+            self.mao_jogador1.append(valor)

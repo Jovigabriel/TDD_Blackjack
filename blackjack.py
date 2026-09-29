@@ -78,3 +78,10 @@ class Blackjack:
         ]
 
         self.baralho = valores * 4
+
+    def distribuir_cartas(self):
+        self.maos[1].append(self.baralho.pop())
+        self.maos[2].append(self.baralho.pop())
+
+        self.maos[1].append(self.baralho.pop())
+        self.maos[2].append(self.baralho.pop())

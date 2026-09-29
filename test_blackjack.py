@@ -119,5 +119,10 @@ def test_empate():
     assert jogo.determinar_vencedor() == "empate"
 
 
+def test_criar_baralho():
+    jogo = Blackjack()
 
+    jogo.criar_baralho()
+
+    assert len(jogo.baralho) == 52
 

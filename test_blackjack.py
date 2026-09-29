@@ -1,5 +1,5 @@
-#from blackjack import Blackjack
-from blackjack_ref import Blackjack
+from blackjack import Blackjack
+#from blackjack_ref import Blackjack
 
 
 
@@ -136,3 +136,10 @@ def test_distribuir_cartas_iniciais():
     assert len(jogo.maos[1]) == 2
     assert len(jogo.maos[2]) == 2
 
+def test_comprar_carta():
+    jogo = Blackjack()
+
+    jogo.criar_baralho()
+    jogo.comprar_carta(1)
+
+    assert len(jogo.maos[1]) == 1

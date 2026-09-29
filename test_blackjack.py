@@ -107,5 +107,17 @@ def test_jogador_que_estoura_perde():
     assert jogo.determinar_vencedor() == 2
 
 
+def test_empate():
+    jogo = Blackjack()
+
+    jogo.adicionar_carta(1, "10")
+    jogo.adicionar_carta(1, "8")
+
+    jogo.adicionar_carta(2, "K")
+    jogo.adicionar_carta(2, "8")
+
+    assert jogo.determinar_vencedor() == "empate"
+
+
 
 

@@ -1,5 +1,5 @@
-#from blackjack import Blackjack
-from blackjack_ref import Blackjack
+from blackjack import Blackjack
+#from blackjack_ref import Blackjack
 
 
 
@@ -83,7 +83,16 @@ def test_adicionar_carta_jogador2():
     assert jogo.maos[2] == ["7"]
 
 
+def test_jogador1_vence_com_maior_pontuacao():
+    jogo = Blackjack()
 
+    jogo.adicionar_carta(1, "10")
+    jogo.adicionar_carta(1, "9")
+
+    jogo.adicionar_carta(2, "10")
+    jogo.adicionar_carta(2, "7")
+
+    assert jogo.determinar_vencedor() == 1
 
 
 

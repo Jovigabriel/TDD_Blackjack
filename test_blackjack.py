@@ -77,10 +77,12 @@ def test_jogador_nao_estorou():
 
 def test_adicionar_carta_jogador2():
     jogo = Blackjack()
-        
+    
     jogo.adicionar_carta(2, "7")
-            
+        
     assert jogo.mao_jogador2 == ["7"]
+
+
 
 
 

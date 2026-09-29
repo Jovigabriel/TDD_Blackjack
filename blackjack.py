@@ -2,17 +2,28 @@ class Blackjack:
 
     def __init__(self):
         self.mao_jogador1 = []
+        self.mao_jogador2 = []
 
     def adicionar_carta(self, jogador, valor):
 
         if jogador == 1:
             self.mao_jogador1.append(valor)
 
+        if jogador == 2:
+            self.mao_jogador2.append(valor)
+   
+
     def calcular_pontuacao(self, jogador):
+
+        if jogador == 1:
+            mao = self.mao_jogador1
+        else:
+            mao = self.mao_jogador2
+
         total = 0
         quantidade_as = 0
             
-        for carta in self.mao_jogador1:
+        for carta in mao:
             total += self.valor_carta(carta)
 
             if carta.upper() == "A":

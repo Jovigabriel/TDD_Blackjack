@@ -44,5 +44,16 @@ def test_as_vale_onze():
         
     assert pontos == 20
 
+def test_as_vale_um():
+    jogo = Blackjack()
+                
+    jogo.adicionar_carta(1, "A")
+    jogo.adicionar_carta(1, "9")
+    jogo.adicionar_carta(1, "5")
+    
+    pontos = jogo.calcular_pontuacao(1)
+            
+    assert pontos == 15
+
 
 

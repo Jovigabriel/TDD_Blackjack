@@ -34,3 +34,15 @@ def test_calcular_pontuacoes_letras():
     
     assert pontos == 20
 
+def test_as_vale_onze():
+    jogo = Blackjack()
+            
+    jogo.adicionar_carta(1, "A")
+    jogo.adicionar_carta(1, "9")
+
+    pontos = jogo.calcular_pontuacao(1)
+        
+    assert pontos == 20
+
+
+

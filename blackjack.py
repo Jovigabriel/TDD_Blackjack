@@ -53,11 +53,17 @@ class Blackjack:
         pontos1 = self.calcular_pontuacao(1)
         pontos2 = self.calcular_pontuacao(2)
 
+        if pontos1 > 21 and pontos2 > 21:
+            return "empate"
+
         if pontos1 > 21:
             return 2
 
         if pontos2 > 21:
             return 1
+
+        if pontos1 == pontos2:
+            return "empate"
 
         if pontos1 > pontos2:
             return 1

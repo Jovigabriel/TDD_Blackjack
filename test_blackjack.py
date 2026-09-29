@@ -143,3 +143,15 @@ def test_comprar_carta():
     jogo.comprar_carta(1)
 
     assert len(jogo.maos[1]) == 1
+
+
+def test_visualizar_mesa():
+    jogo = Blackjack()
+
+    jogo.adicionar_carta(1, "10")
+    jogo.adicionar_carta(2, "7")
+
+    mesa = jogo.visualizar_mesa()
+
+    assert mesa[1] == ["10"]
+    assert mesa[2] == ["7"]

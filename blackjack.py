@@ -87,3 +87,5 @@ class Blackjack:
     def comprar_carta(self, jogador):
         carta = self.baralho.pop()
         self.maos[jogador].append(carta)
+
+    

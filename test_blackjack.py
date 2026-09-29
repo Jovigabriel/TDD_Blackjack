@@ -126,3 +126,13 @@ def test_criar_baralho():
 
     assert len(jogo.baralho) == 52
 
+
+def test_distribuir_cartas_iniciais():
+    jogo = Blackjack()
+
+    jogo.criar_baralho()
+    jogo.distribuir_cartas()
+
+    assert len(jogo.maos[1]) == 2
+    assert len(jogo.maos[2]) == 2
+

@@ -39,6 +39,15 @@ class Blackjack:
     def estorou(self, jogador):
         return self.calcular_pontuacao(jogador) > 21
 
+    def determinar_vencedor(self):
+        pontos1 = self.calcular_pontuacao(1)
+        pontos2 = self.calcular_pontuacao(2)
+
+        if pontos1 > pontos2:
+            return 1
+
+        return 2
+
     
     
 

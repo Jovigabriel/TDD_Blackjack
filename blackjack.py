@@ -20,7 +20,15 @@ class Blackjack:
     def valor_carta(self, carta):
         carta = carta.upper()
 
+        if carta == "A":
+            return 11
+
         if carta in ["J", "K", "Q"]:
             return 10
 
         return int(carta)
+
+    
+    
+
+       

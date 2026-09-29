@@ -83,3 +83,13 @@ class Blackjack:
         for _ in range(2):
             for jogador in [1, 2]:
                 self.maos[jogador].append(self.baralho.pop())
+
+    def comprar_carta(self, jogador):
+        carta = self.baralho.pop()
+        self.maos[jogador].append(carta)
+
+    def visualizar_mesa(self):
+        return {
+            1: self.maos[1].copy(),
+            2: self.maos[2].copy()
+        }
